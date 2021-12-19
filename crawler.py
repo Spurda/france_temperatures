@@ -125,7 +125,7 @@ if __name__ == '__main__':
         city_name=''
         country='FR'
         request_number = 0
-        for ville in villes_france.iloc[0:1000]:
+        for ville in villes_france.iloc[0:500]:
             if request_number > 58:
                 print('Quota de requêtes/minute en approche, sleep 1min1s')
                 time.sleep(61)
@@ -168,9 +168,9 @@ if __name__ == '__main__':
     except IOError:
         print('no internet')
 
-france_df = pd.read_csv('weatherOpenMap.csv')
-france_df = france_df[france_df['temp_max']!='temp_max']
-france_df.to_csv('clean_weather_France.csv')
+#france_df = pd.read_csv('weatherOpenMap.csv')
+#france_df = france_df[france_df['temp_max']!='temp_max']
+#france_df.to_csv('clean_weather_France.csv')
 
 print('Scrapping finished.')
 
